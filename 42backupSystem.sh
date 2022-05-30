@@ -1,3 +1,4 @@
+#!/bin/sh
 # REQUIRES PV (http://manpages.ubuntu.com/manpages/bionic/man1/pv.1.html)
 
 echo 'STARTING BACKUP PROCEDURE'
@@ -12,7 +13,8 @@ echo
 echo '[UPLOADING BACKUP TO THE CLOUD]'
 _date=$(date +"%d%m%Y_%H%M%S")
 _filename="backup_$_date.tar.gz"
-scp -i ~/.ssh/id_rsa -P 23 /backup.tar.gz user@server.tld:$_filename
+_user="user@server.tld"
+scp -i ~/.ssh/id_rsa -P 23 /backup.tar.gz $_user:$_filename
 echo
 
 echo '[REMOVING TEMPORARY FILES]'
