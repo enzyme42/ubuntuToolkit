@@ -7,7 +7,7 @@ ssh-keygen -t ed25519 -C "first.last@domain.tld"
 
 cat ~/.ssh/id_ed25519.pub
 
-# Returns PUBLIC_KEY - add it to your SSH keys on Github
+# Returns PUBLIC_KEY - add it to your SSH keys (auth and sign) on Github
 
 ssh-add ~/.ssh/id_ed25519
 
