@@ -14,5 +14,5 @@ ssh-add ~/.ssh/id_ed25519
 git config --global gpg.format ssh
 git config --global user.signingKey "PUBLIC_KEY"
 
-git config --global commit.gpgsign true
-git config --global tag.gpgsign true
+git config --global commit.gpgSign true
+git config --global tag.gpgSign true
